@@ -1,10 +1,10 @@
-# 🚦 Lane-Aware Multi-Robot Traffic Control System
+#  Lane-Aware Multi-Robot Traffic Control System
 
 A simulation-based system for coordinating multiple autonomous robots in a warehouse-like grid while avoiding collisions, minimizing deadlocks, and maximizing throughput.
 
 ---
 
-## 📌 Overview
+##  Overview
 
 In modern warehouses, multiple robots share narrow pathways and intersections. Naive shortest-path routing leads to **deadlocks, congestion, and starvation**.
 
@@ -17,16 +17,16 @@ This project implements a **lane-aware, reservation-based traffic control system
 
 ---
 
-## 🎯 Key Objectives
+##  Key Objectives
 
-* 🚫 Eliminate infinite deadlock loops
-* ⚡ Improve throughput (tasks completed per tick)
-* 🧠 Introduce memory-aware routing
-* 🚗 Simulate realistic traffic behavior (like road systems)
+*  Eliminate infinite deadlock loops
+*  Improve throughput (tasks completed per tick)
+*  Introduce memory-aware routing
+*  Simulate realistic traffic behavior (like road systems)
 
 ---
 
-## 🧠 Core Concepts
+##  Core Concepts
 
 ### 1. A* Path Planning
 
@@ -99,7 +99,7 @@ This ensures fairness across all robots.
 
 ---
 
-## ⚙️ Implementation Details
+##  Implementation Details
 
 * Language: **Python**
 * Algorithmic components:
@@ -117,16 +117,16 @@ This ensures fairness across all robots.
 
 ## 📊 Results
 
-| Metric           | Before Fixes | After Fixes          |
-| ---------------- | ------------ | -------------------- |
-| Completed Robots | ~1–3 / 10    | **6 / 10**           |
-| Deadlocks        | 70+          | **20**               |
-| Throughput       | Very Low     | **0.02 robots/tick** |
-| Infinite Loops   | Yes ❌        | **Eliminated ✅**     |
+| Metric           | After Fixes          |
+| ---------------- | -------------------- |
+| Completed Robots | **6 / 10**           |
+| Deadlocks        |**20**               |
+| Throughput       | **0.02 robots/tick** |
+| Infinite Loops   | **Eliminated ✅**     |
 
 ---
 
-## 🧪 How to Run
+## How to Run
 
 ### 1. Clone the repo
 
@@ -149,14 +149,14 @@ python headless_sim.py
 
 ---
 
-## 📈 Output
+##  Output
 
 The simulation provides:
 
-* 📍 Live grid visualization
-* 📊 Throughput graph
-* ⏱ Robot wait times
-* 📋 Final summary including:
+*  Live grid visualization
+*  Throughput graph
+*  Robot wait times
+*  Final summary including:
 
   * completed robots
   * deadlocks
@@ -164,56 +164,15 @@ The simulation provides:
 
 ---
 
-## 🚧 Challenges Faced
 
-### 1. Infinite Deadlock Loops
-
-**Problem:**
-Robots repeatedly entered the same conflict cycles
-
-**Solution:**
-Introduced **persistent edge penalties** so A* avoids problematic paths
-
----
-
-### 2. Reactive Collision Handling
-
-**Problem:**
-System only reacted *after* collisions occurred
-
-**Solution:**
-Implemented **reservation-based movement**, preventing conflicts beforehand
-
----
-
-### 3. Starvation of Robots
-
-**Problem:**
-Low-priority robots never got access
-
-**Solution:**
-Dynamic priority escalation based on wait time
-
----
-
-### 4. Excessive Replanning Chaos
-
-**Problem:**
-Robots kept changing paths every tick
-
-**Solution:**
-Limited replanning frequency → enforced stable queues
-
----
-
-## 🧠 Key Insight
+##  Key Insight
 
 > Pure shortest-path planning fails in multi-agent systems.
 > **Coordination requires both space AND time awareness.**
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Time-expanded planning (space-time A*)
 * Multi-agent pathfinding (CBS / MAPF)
@@ -222,7 +181,7 @@ Limited replanning frequency → enforced stable queues
 
 ---
 
-## 🏁 Conclusion
+##  Conclusion
 
 This project demonstrates how combining:
 
@@ -234,7 +193,7 @@ can transform a chaotic multi-robot environment into a **stable, efficient traff
 
 ---
 
-## 👤 Author
+## Author
 
 Developed as part of a hackathon project focused on intelligent multi-agent systems.
 
