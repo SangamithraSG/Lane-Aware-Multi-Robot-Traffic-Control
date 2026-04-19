@@ -117,12 +117,12 @@ This ensures fairness across all robots.
 
 ## 📊 Results
 
-| Metric           | After Fixes          |
+| Metric           | Results          |
 | ---------------- | -------------------- |
 | Completed Robots | **6 / 10**           |
 | Deadlocks        |**20**               |
 | Throughput       | **0.02 robots/tick** |
-| Infinite Loops   | **Eliminated ✅**     |
+| Infinite Loops   | **Eliminated**     |
 
 ---
 
